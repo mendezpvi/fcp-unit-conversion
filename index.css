@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/font/Inter.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+  display: grid;
+  place-content: center;
+  font-family: 'Inter';
+  background-color: var(--blue);
+}
+
+:root {
+  --radius: .5rem;
+  --blue: #030637;
+  --white: #F5F5F5;
+  --light-blue: #363062;
+  --middle-blue: #4D4C7D;
+  --extra-light-blue: #bdc0ff;
+}
+
+.card {
+  margin-block: 2rem;
+  inline-size: clamp(20.6rem, 88vw, 29rem);
+  display: grid;
+  text-align: center;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.card__header,
+.card__result {
+  padding: 1rem 1.5rem;
+}
+.card__header {
+  background-color: #F99417;
+  color: var(--blue);
+}
+.input {
+  inline-size: 6rem;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid currentColor;
+  border-radius: var(--radius);
+  color: inherit;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+  margin: 0;
+}
+input[type=number] { 
+  -moz-appearance:textfield; 
+  appearance:textfield; 
+}
+
+.btn-wrap {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.btn {
+  flex: 1;
+  padding: .5rem .8rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--radius);
+  color: var(--white);
+}
+
+.card__result {
+  display: grid;
+  gap: 1rem;
+  background-color: var(--light-blue);
+  color: var(--white);
+}
+.result-item {
+  padding: .8rem;
+  display: grid;
+  grid-template-rows: repeat(2, 2rem);
+  align-items: center;
+  background-color: var(--middle-blue);
+  border-radius: .5rem;
+}
+.result-item__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--extra-light-blue);
+}
+.result-item__description {
+  margin: 0;
+  font-size: .9rem;
+}
