@@ -4,32 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unit Conversion</title>
+
+  <link rel="icon" href="./assets/icon/favicon.png">
+  <link rel="apple-touch-icon" href="./assets/icon/favicon.png">
+  
   <link rel="stylesheet" href="./index.css">
 </head>
 <body>
   <main>
     <div class="card" role="article">
       <section class="card__header">
-        <h1>Metric/Imperial Unit Conversion</h1>
-        <input type="number" name="number" id="number" de>
-        <button id="convert-btn" type="button">Convert</button>
-        <button id="reset-btn" type="button">Reset</button>
+        <h1 class="card__title">Metric/Imperial Unit Conversion</h1>
+        <input type="number" name="number" min="0" max="99" id="number" class="input">
+        <div class="btn-wrap">
+          <button class="btn" id="convert-btn" type="button">Convert</button>
+          <button class="btn" id="reset-btn" type="button">Reset</button>
+        </div>
       </section>
 
       <div class="card__result">
         <div class="result-item">
-          <h2>Length (Meter/Feet)</h2>
-          <p id="result-length"></p>
+          <h2 class="result-item__title">Length (Meter/Feet)</h2>
+          <p class="result-item__description" id="result-length"></p>
         </div>
 
         <div class="result-item">
-          <h2>Volume (Liters/Gallons)</h2>
-          <p id="result-volume"></p>
+          <h2 class="result-item__title">Volume (Liters/Gallons)</h2>
+          <p class="resul-itemt__description" id="result-volume"></p>
         </div>
 
         <div class="result-item">
-          <h2>Mass (Kilograms/Pounds)</h2>
-          <p id="result-mass"></p>
+          <h2 class="result-item__title">Mass (Kilograms/Pounds)</h2>
+          <p class="result-item__description" id="result-mass"></p>
         </div>
       </div>
     </div>
